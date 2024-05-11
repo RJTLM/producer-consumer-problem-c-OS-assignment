@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="mssv"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="mingw32-make -f &quot;C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="mingw32-make -f &quot;C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="mingw32-make -f &quot;C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="mingw32-make -f &quot;C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mssv">
+				<Option output="C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/cmake-build-debug/mssv.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/Assignment"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="mingw32-make -f &quot;C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/cmake-build-debug/Makefile&quot;  VERBOSE=1 mssv"/>
+					<CompileFile command="mingw32-make -f &quot;C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="mingw32-make -f &quot;C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="mingw32-make -f &quot;C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mssv/fast">
+				<Option output="C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/cmake-build-debug/mssv.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/Assignment"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="mingw32-make -f &quot;C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/cmake-build-debug/Makefile&quot;  VERBOSE=1 mssv/fast"/>
+					<CompileFile command="mingw32-make -f &quot;C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="mingw32-make -f &quot;C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="mingw32-make -f &quot;C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="mingw32-make -f &quot;C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="mingw32-make -f &quot;C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="mingw32-make -f &quot;C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="mingw32-make -f &quot;C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="mingw32-make -f &quot;C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="mingw32-make -f &quot;C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="mingw32-make -f &quot;C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="mingw32-make -f &quot;C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/Assignment/mssv.c">
+			<Option target="mssv"/>
+		</Unit>
+		<Unit filename="C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/Assignment/mssv.h">
+			<Option target="mssv"/>
+		</Unit>
+		<Unit filename="C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/Assignment/sudoku_validator.c">
+			<Option target="mssv"/>
+		</Unit>
+		<Unit filename="C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/Assignment/sudoku_validator.h">
+			<Option target="mssv"/>
+		</Unit>
+		<Unit filename="C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/Assignment/utilities.c">
+			<Option target="mssv"/>
+		</Unit>
+		<Unit filename="C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/Assignment/utilities.h">
+			<Option target="mssv"/>
+		</Unit>
+		<Unit filename="C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

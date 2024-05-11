@@ -1,0 +1,3 @@
+C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/cmake-build-debug/CMakeFiles/mssv.dir
+C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/cmake-build-debug/CMakeFiles/rebuild_cache.dir
