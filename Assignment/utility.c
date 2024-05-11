@@ -6,4 +6,20 @@
 
 #include "utility.h"
 
-// Implement utility functions here
+void printErrorMessage(char *message) {
+    fprintf(stderr, "Error: %s\n", message);
+}
+
+void printMessage(char *message) {
+    printf("%s\n", message);
+}
+
+void printSudokuSolution(int sudoku[9][9]) {
+    printf("Sudoku Solution:\n");
+    for (int i = 0; i < 9; i++) {
+        for (int j = 0; j < 9; j++) {
+            printf("%d ", sudoku[i][j]);
+        }
+        printf("\n");
+    }
+}

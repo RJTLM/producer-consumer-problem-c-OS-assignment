@@ -7,9 +7,14 @@
 #ifndef MSSV_H
 #define MSSV_H
 
-// Define any constants or global variables here
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <pthread.h>
 
-// Declare function prototypes
-void validateSudokuSolution(char* filename, int delay);
+#include "file_reader.h"
+#include "thread_functions.h"
+#include "utility.h"
+#include "thread_mgmt.h"
 
 #endif /* MSSV_H */
