@@ -84,22 +84,34 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/Assignment/file_reader.c">
+			<Option target="mssv"/>
+		</Unit>
+		<Unit filename="C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/Assignment/file_reader.h">
+			<Option target="mssv"/>
+		</Unit>
 		<Unit filename="C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/Assignment/mssv.c">
 			<Option target="mssv"/>
 		</Unit>
 		<Unit filename="C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/Assignment/mssv.h">
 			<Option target="mssv"/>
 		</Unit>
-		<Unit filename="C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/Assignment/sudoku_validator.c">
+		<Unit filename="C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/Assignment/thread_functions.c">
 			<Option target="mssv"/>
 		</Unit>
-		<Unit filename="C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/Assignment/sudoku_validator.h">
+		<Unit filename="C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/Assignment/thread_functions.h">
 			<Option target="mssv"/>
 		</Unit>
-		<Unit filename="C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/Assignment/utilities.c">
+		<Unit filename="C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/Assignment/thread_mgmt.c">
 			<Option target="mssv"/>
 		</Unit>
-		<Unit filename="C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/Assignment/utilities.h">
+		<Unit filename="C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/Assignment/thread_mgmt.h">
+			<Option target="mssv"/>
+		</Unit>
+		<Unit filename="C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/Assignment/utility.c">
+			<Option target="mssv"/>
+		</Unit>
+		<Unit filename="C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/Assignment/utility.h">
 			<Option target="mssv"/>
 		</Unit>
 		<Unit filename="C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/CMakeLists.txt">

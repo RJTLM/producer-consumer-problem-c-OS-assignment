@@ -83,53 +83,87 @@ CMakeFiles/mssv.dir/Assignment/mssv.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/mssv.dir/Assignment/mssv.c.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\RyanM\OneDrive\CurtinUniversity\2024\Semester1\OS\Assessments\Assignment\OS\Assignment\mssv.c -o CMakeFiles\mssv.dir\Assignment\mssv.c.s
 
-CMakeFiles/mssv.dir/Assignment/sudoku_validator.c.obj: CMakeFiles/mssv.dir/flags.make
-CMakeFiles/mssv.dir/Assignment/sudoku_validator.c.obj: CMakeFiles/mssv.dir/includes_C.rsp
-CMakeFiles/mssv.dir/Assignment/sudoku_validator.c.obj: C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/Assignment/sudoku_validator.c
-CMakeFiles/mssv.dir/Assignment/sudoku_validator.c.obj: CMakeFiles/mssv.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\RyanM\OneDrive\CurtinUniversity\2024\Semester1\OS\Assessments\Assignment\OS\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/mssv.dir/Assignment/sudoku_validator.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mssv.dir/Assignment/sudoku_validator.c.obj -MF CMakeFiles\mssv.dir\Assignment\sudoku_validator.c.obj.d -o CMakeFiles\mssv.dir\Assignment\sudoku_validator.c.obj -c C:\Users\RyanM\OneDrive\CurtinUniversity\2024\Semester1\OS\Assessments\Assignment\OS\Assignment\sudoku_validator.c
+CMakeFiles/mssv.dir/Assignment/file_reader.c.obj: CMakeFiles/mssv.dir/flags.make
+CMakeFiles/mssv.dir/Assignment/file_reader.c.obj: CMakeFiles/mssv.dir/includes_C.rsp
+CMakeFiles/mssv.dir/Assignment/file_reader.c.obj: C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/Assignment/file_reader.c
+CMakeFiles/mssv.dir/Assignment/file_reader.c.obj: CMakeFiles/mssv.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\RyanM\OneDrive\CurtinUniversity\2024\Semester1\OS\Assessments\Assignment\OS\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/mssv.dir/Assignment/file_reader.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mssv.dir/Assignment/file_reader.c.obj -MF CMakeFiles\mssv.dir\Assignment\file_reader.c.obj.d -o CMakeFiles\mssv.dir\Assignment\file_reader.c.obj -c C:\Users\RyanM\OneDrive\CurtinUniversity\2024\Semester1\OS\Assessments\Assignment\OS\Assignment\file_reader.c
 
-CMakeFiles/mssv.dir/Assignment/sudoku_validator.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/mssv.dir/Assignment/sudoku_validator.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\RyanM\OneDrive\CurtinUniversity\2024\Semester1\OS\Assessments\Assignment\OS\Assignment\sudoku_validator.c > CMakeFiles\mssv.dir\Assignment\sudoku_validator.c.i
+CMakeFiles/mssv.dir/Assignment/file_reader.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/mssv.dir/Assignment/file_reader.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\RyanM\OneDrive\CurtinUniversity\2024\Semester1\OS\Assessments\Assignment\OS\Assignment\file_reader.c > CMakeFiles\mssv.dir\Assignment\file_reader.c.i
 
-CMakeFiles/mssv.dir/Assignment/sudoku_validator.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/mssv.dir/Assignment/sudoku_validator.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\RyanM\OneDrive\CurtinUniversity\2024\Semester1\OS\Assessments\Assignment\OS\Assignment\sudoku_validator.c -o CMakeFiles\mssv.dir\Assignment\sudoku_validator.c.s
+CMakeFiles/mssv.dir/Assignment/file_reader.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/mssv.dir/Assignment/file_reader.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\RyanM\OneDrive\CurtinUniversity\2024\Semester1\OS\Assessments\Assignment\OS\Assignment\file_reader.c -o CMakeFiles\mssv.dir\Assignment\file_reader.c.s
 
-CMakeFiles/mssv.dir/Assignment/utilities.c.obj: CMakeFiles/mssv.dir/flags.make
-CMakeFiles/mssv.dir/Assignment/utilities.c.obj: CMakeFiles/mssv.dir/includes_C.rsp
-CMakeFiles/mssv.dir/Assignment/utilities.c.obj: C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/Assignment/utilities.c
-CMakeFiles/mssv.dir/Assignment/utilities.c.obj: CMakeFiles/mssv.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\RyanM\OneDrive\CurtinUniversity\2024\Semester1\OS\Assessments\Assignment\OS\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/mssv.dir/Assignment/utilities.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mssv.dir/Assignment/utilities.c.obj -MF CMakeFiles\mssv.dir\Assignment\utilities.c.obj.d -o CMakeFiles\mssv.dir\Assignment\utilities.c.obj -c C:\Users\RyanM\OneDrive\CurtinUniversity\2024\Semester1\OS\Assessments\Assignment\OS\Assignment\utilities.c
+CMakeFiles/mssv.dir/Assignment/utility.c.obj: CMakeFiles/mssv.dir/flags.make
+CMakeFiles/mssv.dir/Assignment/utility.c.obj: CMakeFiles/mssv.dir/includes_C.rsp
+CMakeFiles/mssv.dir/Assignment/utility.c.obj: C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/Assignment/utility.c
+CMakeFiles/mssv.dir/Assignment/utility.c.obj: CMakeFiles/mssv.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\RyanM\OneDrive\CurtinUniversity\2024\Semester1\OS\Assessments\Assignment\OS\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/mssv.dir/Assignment/utility.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mssv.dir/Assignment/utility.c.obj -MF CMakeFiles\mssv.dir\Assignment\utility.c.obj.d -o CMakeFiles\mssv.dir\Assignment\utility.c.obj -c C:\Users\RyanM\OneDrive\CurtinUniversity\2024\Semester1\OS\Assessments\Assignment\OS\Assignment\utility.c
 
-CMakeFiles/mssv.dir/Assignment/utilities.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/mssv.dir/Assignment/utilities.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\RyanM\OneDrive\CurtinUniversity\2024\Semester1\OS\Assessments\Assignment\OS\Assignment\utilities.c > CMakeFiles\mssv.dir\Assignment\utilities.c.i
+CMakeFiles/mssv.dir/Assignment/utility.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/mssv.dir/Assignment/utility.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\RyanM\OneDrive\CurtinUniversity\2024\Semester1\OS\Assessments\Assignment\OS\Assignment\utility.c > CMakeFiles\mssv.dir\Assignment\utility.c.i
 
-CMakeFiles/mssv.dir/Assignment/utilities.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/mssv.dir/Assignment/utilities.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\RyanM\OneDrive\CurtinUniversity\2024\Semester1\OS\Assessments\Assignment\OS\Assignment\utilities.c -o CMakeFiles\mssv.dir\Assignment\utilities.c.s
+CMakeFiles/mssv.dir/Assignment/utility.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/mssv.dir/Assignment/utility.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\RyanM\OneDrive\CurtinUniversity\2024\Semester1\OS\Assessments\Assignment\OS\Assignment\utility.c -o CMakeFiles\mssv.dir\Assignment\utility.c.s
+
+CMakeFiles/mssv.dir/Assignment/thread_functions.c.obj: CMakeFiles/mssv.dir/flags.make
+CMakeFiles/mssv.dir/Assignment/thread_functions.c.obj: CMakeFiles/mssv.dir/includes_C.rsp
+CMakeFiles/mssv.dir/Assignment/thread_functions.c.obj: C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/Assignment/thread_functions.c
+CMakeFiles/mssv.dir/Assignment/thread_functions.c.obj: CMakeFiles/mssv.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\RyanM\OneDrive\CurtinUniversity\2024\Semester1\OS\Assessments\Assignment\OS\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/mssv.dir/Assignment/thread_functions.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mssv.dir/Assignment/thread_functions.c.obj -MF CMakeFiles\mssv.dir\Assignment\thread_functions.c.obj.d -o CMakeFiles\mssv.dir\Assignment\thread_functions.c.obj -c C:\Users\RyanM\OneDrive\CurtinUniversity\2024\Semester1\OS\Assessments\Assignment\OS\Assignment\thread_functions.c
+
+CMakeFiles/mssv.dir/Assignment/thread_functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/mssv.dir/Assignment/thread_functions.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\RyanM\OneDrive\CurtinUniversity\2024\Semester1\OS\Assessments\Assignment\OS\Assignment\thread_functions.c > CMakeFiles\mssv.dir\Assignment\thread_functions.c.i
+
+CMakeFiles/mssv.dir/Assignment/thread_functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/mssv.dir/Assignment/thread_functions.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\RyanM\OneDrive\CurtinUniversity\2024\Semester1\OS\Assessments\Assignment\OS\Assignment\thread_functions.c -o CMakeFiles\mssv.dir\Assignment\thread_functions.c.s
+
+CMakeFiles/mssv.dir/Assignment/thread_mgmt.c.obj: CMakeFiles/mssv.dir/flags.make
+CMakeFiles/mssv.dir/Assignment/thread_mgmt.c.obj: CMakeFiles/mssv.dir/includes_C.rsp
+CMakeFiles/mssv.dir/Assignment/thread_mgmt.c.obj: C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/Assignment/thread_mgmt.c
+CMakeFiles/mssv.dir/Assignment/thread_mgmt.c.obj: CMakeFiles/mssv.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\RyanM\OneDrive\CurtinUniversity\2024\Semester1\OS\Assessments\Assignment\OS\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/mssv.dir/Assignment/thread_mgmt.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mssv.dir/Assignment/thread_mgmt.c.obj -MF CMakeFiles\mssv.dir\Assignment\thread_mgmt.c.obj.d -o CMakeFiles\mssv.dir\Assignment\thread_mgmt.c.obj -c C:\Users\RyanM\OneDrive\CurtinUniversity\2024\Semester1\OS\Assessments\Assignment\OS\Assignment\thread_mgmt.c
+
+CMakeFiles/mssv.dir/Assignment/thread_mgmt.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/mssv.dir/Assignment/thread_mgmt.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\RyanM\OneDrive\CurtinUniversity\2024\Semester1\OS\Assessments\Assignment\OS\Assignment\thread_mgmt.c > CMakeFiles\mssv.dir\Assignment\thread_mgmt.c.i
+
+CMakeFiles/mssv.dir/Assignment/thread_mgmt.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/mssv.dir/Assignment/thread_mgmt.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\RyanM\OneDrive\CurtinUniversity\2024\Semester1\OS\Assessments\Assignment\OS\Assignment\thread_mgmt.c -o CMakeFiles\mssv.dir\Assignment\thread_mgmt.c.s
 
 # Object files for target mssv
 mssv_OBJECTS = \
 "CMakeFiles/mssv.dir/Assignment/mssv.c.obj" \
-"CMakeFiles/mssv.dir/Assignment/sudoku_validator.c.obj" \
-"CMakeFiles/mssv.dir/Assignment/utilities.c.obj"
+"CMakeFiles/mssv.dir/Assignment/file_reader.c.obj" \
+"CMakeFiles/mssv.dir/Assignment/utility.c.obj" \
+"CMakeFiles/mssv.dir/Assignment/thread_functions.c.obj" \
+"CMakeFiles/mssv.dir/Assignment/thread_mgmt.c.obj"
 
 # External object files for target mssv
 mssv_EXTERNAL_OBJECTS =
 
 mssv.exe: CMakeFiles/mssv.dir/Assignment/mssv.c.obj
-mssv.exe: CMakeFiles/mssv.dir/Assignment/sudoku_validator.c.obj
-mssv.exe: CMakeFiles/mssv.dir/Assignment/utilities.c.obj
+mssv.exe: CMakeFiles/mssv.dir/Assignment/file_reader.c.obj
+mssv.exe: CMakeFiles/mssv.dir/Assignment/utility.c.obj
+mssv.exe: CMakeFiles/mssv.dir/Assignment/thread_functions.c.obj
+mssv.exe: CMakeFiles/mssv.dir/Assignment/thread_mgmt.c.obj
 mssv.exe: CMakeFiles/mssv.dir/build.make
 mssv.exe: CMakeFiles/mssv.dir/linkLibs.rsp
 mssv.exe: CMakeFiles/mssv.dir/objects1.rsp
 mssv.exe: CMakeFiles/mssv.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\RyanM\OneDrive\CurtinUniversity\2024\Semester1\OS\Assessments\Assignment\OS\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable mssv.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\RyanM\OneDrive\CurtinUniversity\2024\Semester1\OS\Assessments\Assignment\OS\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable mssv.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\mssv.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

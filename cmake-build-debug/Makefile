@@ -128,6 +128,30 @@ mssv/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mssv.dir\build.make CMakeFiles/mssv.dir/build
 .PHONY : mssv/fast
 
+Assignment/file_reader.obj: Assignment/file_reader.c.obj
+.PHONY : Assignment/file_reader.obj
+
+# target to build an object file
+Assignment/file_reader.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mssv.dir\build.make CMakeFiles/mssv.dir/Assignment/file_reader.c.obj
+.PHONY : Assignment/file_reader.c.obj
+
+Assignment/file_reader.i: Assignment/file_reader.c.i
+.PHONY : Assignment/file_reader.i
+
+# target to preprocess a source file
+Assignment/file_reader.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mssv.dir\build.make CMakeFiles/mssv.dir/Assignment/file_reader.c.i
+.PHONY : Assignment/file_reader.c.i
+
+Assignment/file_reader.s: Assignment/file_reader.c.s
+.PHONY : Assignment/file_reader.s
+
+# target to generate assembly for a file
+Assignment/file_reader.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mssv.dir\build.make CMakeFiles/mssv.dir/Assignment/file_reader.c.s
+.PHONY : Assignment/file_reader.c.s
+
 Assignment/mssv.obj: Assignment/mssv.c.obj
 .PHONY : Assignment/mssv.obj
 
@@ -152,53 +176,77 @@ Assignment/mssv.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mssv.dir\build.make CMakeFiles/mssv.dir/Assignment/mssv.c.s
 .PHONY : Assignment/mssv.c.s
 
-Assignment/sudoku_validator.obj: Assignment/sudoku_validator.c.obj
-.PHONY : Assignment/sudoku_validator.obj
+Assignment/thread_functions.obj: Assignment/thread_functions.c.obj
+.PHONY : Assignment/thread_functions.obj
 
 # target to build an object file
-Assignment/sudoku_validator.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mssv.dir\build.make CMakeFiles/mssv.dir/Assignment/sudoku_validator.c.obj
-.PHONY : Assignment/sudoku_validator.c.obj
+Assignment/thread_functions.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mssv.dir\build.make CMakeFiles/mssv.dir/Assignment/thread_functions.c.obj
+.PHONY : Assignment/thread_functions.c.obj
 
-Assignment/sudoku_validator.i: Assignment/sudoku_validator.c.i
-.PHONY : Assignment/sudoku_validator.i
+Assignment/thread_functions.i: Assignment/thread_functions.c.i
+.PHONY : Assignment/thread_functions.i
 
 # target to preprocess a source file
-Assignment/sudoku_validator.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mssv.dir\build.make CMakeFiles/mssv.dir/Assignment/sudoku_validator.c.i
-.PHONY : Assignment/sudoku_validator.c.i
+Assignment/thread_functions.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mssv.dir\build.make CMakeFiles/mssv.dir/Assignment/thread_functions.c.i
+.PHONY : Assignment/thread_functions.c.i
 
-Assignment/sudoku_validator.s: Assignment/sudoku_validator.c.s
-.PHONY : Assignment/sudoku_validator.s
+Assignment/thread_functions.s: Assignment/thread_functions.c.s
+.PHONY : Assignment/thread_functions.s
 
 # target to generate assembly for a file
-Assignment/sudoku_validator.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mssv.dir\build.make CMakeFiles/mssv.dir/Assignment/sudoku_validator.c.s
-.PHONY : Assignment/sudoku_validator.c.s
+Assignment/thread_functions.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mssv.dir\build.make CMakeFiles/mssv.dir/Assignment/thread_functions.c.s
+.PHONY : Assignment/thread_functions.c.s
 
-Assignment/utilities.obj: Assignment/utilities.c.obj
-.PHONY : Assignment/utilities.obj
+Assignment/thread_mgmt.obj: Assignment/thread_mgmt.c.obj
+.PHONY : Assignment/thread_mgmt.obj
 
 # target to build an object file
-Assignment/utilities.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mssv.dir\build.make CMakeFiles/mssv.dir/Assignment/utilities.c.obj
-.PHONY : Assignment/utilities.c.obj
+Assignment/thread_mgmt.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mssv.dir\build.make CMakeFiles/mssv.dir/Assignment/thread_mgmt.c.obj
+.PHONY : Assignment/thread_mgmt.c.obj
 
-Assignment/utilities.i: Assignment/utilities.c.i
-.PHONY : Assignment/utilities.i
+Assignment/thread_mgmt.i: Assignment/thread_mgmt.c.i
+.PHONY : Assignment/thread_mgmt.i
 
 # target to preprocess a source file
-Assignment/utilities.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mssv.dir\build.make CMakeFiles/mssv.dir/Assignment/utilities.c.i
-.PHONY : Assignment/utilities.c.i
+Assignment/thread_mgmt.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mssv.dir\build.make CMakeFiles/mssv.dir/Assignment/thread_mgmt.c.i
+.PHONY : Assignment/thread_mgmt.c.i
 
-Assignment/utilities.s: Assignment/utilities.c.s
-.PHONY : Assignment/utilities.s
+Assignment/thread_mgmt.s: Assignment/thread_mgmt.c.s
+.PHONY : Assignment/thread_mgmt.s
 
 # target to generate assembly for a file
-Assignment/utilities.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mssv.dir\build.make CMakeFiles/mssv.dir/Assignment/utilities.c.s
-.PHONY : Assignment/utilities.c.s
+Assignment/thread_mgmt.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mssv.dir\build.make CMakeFiles/mssv.dir/Assignment/thread_mgmt.c.s
+.PHONY : Assignment/thread_mgmt.c.s
+
+Assignment/utility.obj: Assignment/utility.c.obj
+.PHONY : Assignment/utility.obj
+
+# target to build an object file
+Assignment/utility.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mssv.dir\build.make CMakeFiles/mssv.dir/Assignment/utility.c.obj
+.PHONY : Assignment/utility.c.obj
+
+Assignment/utility.i: Assignment/utility.c.i
+.PHONY : Assignment/utility.i
+
+# target to preprocess a source file
+Assignment/utility.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mssv.dir\build.make CMakeFiles/mssv.dir/Assignment/utility.c.i
+.PHONY : Assignment/utility.c.i
+
+Assignment/utility.s: Assignment/utility.c.s
+.PHONY : Assignment/utility.s
+
+# target to generate assembly for a file
+Assignment/utility.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mssv.dir\build.make CMakeFiles/mssv.dir/Assignment/utility.c.s
+.PHONY : Assignment/utility.c.s
 
 # Help Target
 help:
@@ -209,15 +257,21 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... mssv
+	@echo ... Assignment/file_reader.obj
+	@echo ... Assignment/file_reader.i
+	@echo ... Assignment/file_reader.s
 	@echo ... Assignment/mssv.obj
 	@echo ... Assignment/mssv.i
 	@echo ... Assignment/mssv.s
-	@echo ... Assignment/sudoku_validator.obj
-	@echo ... Assignment/sudoku_validator.i
-	@echo ... Assignment/sudoku_validator.s
-	@echo ... Assignment/utilities.obj
-	@echo ... Assignment/utilities.i
-	@echo ... Assignment/utilities.s
+	@echo ... Assignment/thread_functions.obj
+	@echo ... Assignment/thread_functions.i
+	@echo ... Assignment/thread_functions.s
+	@echo ... Assignment/thread_mgmt.obj
+	@echo ... Assignment/thread_mgmt.i
+	@echo ... Assignment/thread_mgmt.s
+	@echo ... Assignment/utility.obj
+	@echo ... Assignment/utility.i
+	@echo ... Assignment/utility.s
 .PHONY : help
 
 

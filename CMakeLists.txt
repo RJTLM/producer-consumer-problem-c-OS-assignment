@@ -11,8 +11,12 @@ set(CMAKE_C_STANDARD 99)                # Set C standard to C99
 # Specify the target to build and the source files
 add_executable(mssv
         Assignment/mssv.c
-        Assignment/sudoku_validator.c
-        Assignment/utilities.c
+        Assignment/file_reader.c
+        Assignment/utility.c
+        Assignment/thread_functions.h
+        Assignment/thread_functions.c
+        Assignment/thread_mgmt.c
+        Assignment/thread_mgmt.h
 )
 
 # Include directories to ensure the compiler can find the header files

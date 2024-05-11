@@ -8,9 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/Assignment/file_reader.c" "CMakeFiles/mssv.dir/Assignment/file_reader.c.obj" "gcc" "CMakeFiles/mssv.dir/Assignment/file_reader.c.obj.d"
   "C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/Assignment/mssv.c" "CMakeFiles/mssv.dir/Assignment/mssv.c.obj" "gcc" "CMakeFiles/mssv.dir/Assignment/mssv.c.obj.d"
-  "C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/Assignment/sudoku_validator.c" "CMakeFiles/mssv.dir/Assignment/sudoku_validator.c.obj" "gcc" "CMakeFiles/mssv.dir/Assignment/sudoku_validator.c.obj.d"
-  "C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/Assignment/utilities.c" "CMakeFiles/mssv.dir/Assignment/utilities.c.obj" "gcc" "CMakeFiles/mssv.dir/Assignment/utilities.c.obj.d"
+  "C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/Assignment/thread_functions.c" "CMakeFiles/mssv.dir/Assignment/thread_functions.c.obj" "gcc" "CMakeFiles/mssv.dir/Assignment/thread_functions.c.obj.d"
+  "C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/Assignment/thread_mgmt.c" "CMakeFiles/mssv.dir/Assignment/thread_mgmt.c.obj" "gcc" "CMakeFiles/mssv.dir/Assignment/thread_mgmt.c.obj.d"
+  "C:/Users/RyanM/OneDrive/CurtinUniversity/2024/Semester1/OS/Assessments/Assignment/OS/Assignment/utility.c" "CMakeFiles/mssv.dir/Assignment/utility.c.obj" "gcc" "CMakeFiles/mssv.dir/Assignment/utility.c.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
