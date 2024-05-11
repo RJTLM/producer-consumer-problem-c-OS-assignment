@@ -15,14 +15,15 @@ typedef struct {
     int sudoku[9][9];
     int start_row;
     int end_row;
+    int start_col;
+    int end_col;
     int thread_id;
     int validate_rows; // Flag to indicate whether to validate rows (1) or columns (0)
     pthread_mutex_t *mutex;
 } ThreadArgs;
 
 // Declare function prototypes
-void *validateRows(void *args);
-void *validateColumns(void *args);
+void *validateRowsAndColumns(void *args);
 void *validateSubGrids(void *args);
 
 #endif /* THREAD_FUNCTIONS_H */

@@ -4,117 +4,88 @@
 // Created by RyanM on 11/05/2024.
 //
 
+/*
+ * This module is where the core logic of the threading application resides.
+ * It contains the functions that each thread will execute.
+ * These functions are responsible for performing the actual validation work on the Sudoku grid,
+ * whether it's checking rows, columns, or sub-grids.
+ * The functions implemented (validateRowsAndColumns and validateSubGrids) are structured
+ * to perform their tasks based on the parameters passed through ThreadArgs.
+ */
+
 #include "thread_functions.h"
+
+// Helper function to check if all elements are present in a section
+int validateSection(int section[9]) {
+    int seen[10] = {0};  // Using an array to track numbers from 1 to 9
+    for (int i = 0; i < 9; i++) {
+        if (section[i] < 1 || section[i] > 9 || seen[section[i]]) {
+            return 0;  // Return false if an invalid number or a repeat is found
+        }
+        seen[section[i]] = 1;
+    }
+    return 1;  // Return true if the section is valid
+}
 
 void *validateRowsAndColumns(void *args) {
     ThreadArgs *thread_args = (ThreadArgs *)args;
-    int (*sudoku)[9] = thread_args->sudoku;
-    int start_row = thread_args->start_row;
-    int end_row = thread_args->end_row;
-    int thread_id = thread_args->thread_id;
-    int validate_rows = thread_args->validate_rows;
-    pthread_mutex_t *mutex = thread_args->mutex;
+    int valid = 1;
 
-    if (validate_rows) {
+    if (thread_args->validate_rows) {
         // Validate rows
-        for (int i = start_row; i <= end_row; i++) {
-            // Implement row validation logic here
+        for (int i = thread_args->start_row; i <= thread_args->end_row; i++) {
+            if (!validateSection(thread_args->sudoku[i])) {
+                valid = 0;
+                break;
+            }
         }
-        pthread_mutex_lock(mutex);
-        printf("Thread ID-%d: Row validation completed.\n", thread_id);
-        pthread_mutex_unlock(mutex);
     } else {
         // Validate columns
-        // Implement column validation logic here
-        pthread_mutex_lock(mutex);
-        printf("Thread ID-%d: Column validation completed.\n", thread_id);
-        pthread_mutex_unlock(mutex);
+        for (int col = 0; col < 9; col++) {
+            int column[9];
+            for (int row = 0; row < 9; row++) {
+                column[row] = thread_args->sudoku[row][col];
+            }
+            if (!validateSection(column)) {
+                valid = 0;
+                break;
+            }
+        }
     }
 
+    pthread_mutex_lock(thread_args->mutex);
+    printf("Thread ID-%d: %s validation completed with %s.\n", thread_args->thread_id, thread_args->validate_rows ? "Row" : "Column", valid ? "success" : "failure");
+    pthread_mutex_unlock(thread_args->mutex);
     pthread_exit(NULL);
 }
 
 void *validateSubGrids(void *args) {
     ThreadArgs *thread_args = (ThreadArgs *)args;
-    int (*sudoku)[9] = thread_args->sudoku;
-    int thread_id = thread_args->thread_id;
-    pthread_mutex_t *mutex = thread_args->mutex;
+    int valid = 1;
 
-    // Define sub-grid boundaries based on thread ID
-    int start_row, end_row, start_col, end_col;
-    switch (thread_id) {
-        case 0: // Sub-grids 1, 2, 3
-            start_row = 0;
-            end_row = 2;
-            start_col = 0;
-            end_col = 2;
-            break;
-        case 1: // Sub-grids 4, 5, 6
-            start_row = 0;
-            end_row = 2;
-            start_col = 3;
-            end_col = 5;
-            break;
-        case 2: // Sub-grids 7, 8, 9
-            start_row = 0;
-            end_row = 2;
-            start_col = 6;
-            end_col = 8;
-            break;
-        case 3: // Sub-grids 1, 4, 7
-            start_row = 3;
-            end_row = 5;
-            start_col = 0;
-            end_col = 2;
-            break;
-        case 4: // Sub-grids 2, 5, 8
-            start_row = 3;
-            end_row = 5;
-            start_col = 3;
-            end_col = 5;
-            break;
-        case 5: // Sub-grids 3, 6, 9
-            start_row = 3;
-            end_row = 5;
-            start_col = 6;
-            end_col = 8;
-            break;
-        case 6: // Sub-grids 1, 2, 3
-            start_row = 6;
-            end_row = 8;
-            start_col = 0;
-            end_col = 2;
-            break;
-        case 7: // Sub-grids 4, 5, 6
-            start_row = 6;
-            end_row = 8;
-            start_col = 3;
-            end_col = 5;
-            break;
-        case 8: // Sub-grids 7, 8, 9
-            start_row = 6;
-            end_row = 8;
-            start_col = 6;
-            end_col = 8;
-            break;
-        default:
-            // Invalid thread ID
-            pthread_mutex_lock(mutex);
-            printf("Invalid thread ID for sub-grid validation.\n");
-            pthread_mutex_unlock(mutex);
-            pthread_exit(NULL);
-    }
-
-    // Validate sub-grids
-    for (int i = start_row; i <= end_row; i++) {
-        for (int j = start_col; j <= end_col; j++) {
-            // Implement sub-grid validation logic here
+    // Define sub-grid boundaries and validate
+    int startRow = (thread_args->thread_id % 3) * 3;
+    int startCol = (thread_args->thread_id / 3) * 3;
+    for (int i = startRow; i < startRow + 3; i++) {
+        for (int j = startCol; j < startCol + 3; j++) {
+            int grid[9];
+            int k = 0;
+            for (int row = i; row < i + 3; row++) {
+                for (int col = j; col < j + 3; col++) {
+                    grid[k++] = thread_args->sudoku[row][col];
+                }
+            }
+            if (!validateSection(grid)) {
+                valid = 0;
+                break;
+            }
         }
+        if (!valid) break;
     }
 
-    pthread_mutex_lock(mutex);
-    printf("Thread ID-%d: Sub-grid validation completed.\n", thread_id);
-    pthread_mutex_unlock(mutex);
+    pthread_mutex_lock(thread_args->mutex);
+    printf("Thread ID-%d: Sub-grid validation completed with %s.\n", thread_args->thread_id, valid ? "success" : "failure");
+    pthread_mutex_unlock(thread_args->mutex);
 
     pthread_exit(NULL);
 }

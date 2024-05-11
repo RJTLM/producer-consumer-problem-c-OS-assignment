@@ -30,7 +30,10 @@ int main(int argc, char *argv[]) {
     // Create thread arguments
     pthread_t threads[NUM_THREADS];
     ThreadArgs thread_args[NUM_THREADS];
-    pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
+    pthread_mutex_t mutex;
+
+    // Initialize the mutex
+    pthread_mutex_init(&mutex, NULL);
 
     // Create threads for row validation
     for (int i = 0; i < 3; i++) {
@@ -63,10 +66,13 @@ int main(int argc, char *argv[]) {
     sleep(delay);
 
     // Create threads and validate rows, columns, and sub-grids
-    createThreads(threads, NUM_THREADS, validateRowsAndColumns, (void *)thread_args);
+    createThreads(threads, NUM_THREADS, validateRowsAndColumns, thread_args);
 
     // Wait for all threads to complete
     joinThreads(threads, NUM_THREADS);
+
+    // Destroy the mutex after use
+    pthread_mutex_destroy(&mutex);
 
     // Print validation results
     // TODO: Implement printing of validation results
