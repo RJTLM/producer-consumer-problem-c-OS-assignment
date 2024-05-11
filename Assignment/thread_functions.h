@@ -12,7 +12,7 @@
 
 // Define a struct to pass arguments to thread functions
 typedef struct {
-    int sudoku[9][9];
+    int (*sudoku)[9]; // Pointer to a 9x9 array
     int start_row;
     int end_row;
     int start_col;
