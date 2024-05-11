@@ -9,7 +9,7 @@
 void readSudokuSolution(char *filename, int sudoku[9][9]) {
     FILE *file = fopen(filename, "r");
     if (file == NULL) {
-        printf("Error opening file: %s\n", filename);
+        fprintf(stderr, "Error opening file: %s\n", filename);
         exit(EXIT_FAILURE);
     }
 
@@ -17,7 +17,7 @@ void readSudokuSolution(char *filename, int sudoku[9][9]) {
     for (int i = 0; i < 9; i++) {
         for (int j = 0; j < 9; j++) {
             if (fscanf(file, "%d", &sudoku[i][j]) != 1) {
-                printf("Error reading Sudoku solution from file: %s\n", filename);
+                fprintf(stderr, "Error reading Sudoku solution from file: %s\n", filename);
                 exit(EXIT_FAILURE);
             }
         }
