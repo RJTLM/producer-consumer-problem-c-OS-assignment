@@ -10,9 +10,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Define any constants or global variables here
-
-// Declare function prototypes
 void readSudokuSolution(char *filename, int sudoku[9][9]);
 
 #endif /* FILE_READER_H */
+

@@ -10,8 +10,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Define any constants or global variables here
-
 // Declare function prototypes
 void printErrorMessage(char *message);
 void printMessage(char *message);

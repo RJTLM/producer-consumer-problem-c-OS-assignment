@@ -10,8 +10,6 @@
 #include <pthread.h>
 #include "utility.h"
 
-// Define any constants or global variables here
-
 // Define a struct to pass arguments to thread functions
 typedef struct {
     int sudoku[9][9];
@@ -21,7 +19,6 @@ typedef struct {
     int validate_rows; // Flag to indicate whether to validate rows (1) or columns (0)
     pthread_mutex_t *mutex;
 } ThreadArgs;
-
 
 // Declare function prototypes
 void *validateRows(void *args);

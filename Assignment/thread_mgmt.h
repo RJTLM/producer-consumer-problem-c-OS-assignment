@@ -8,8 +8,6 @@
 #include <pthread.h>
 #include "utility.h"
 
-// Define any constants or global variables here
-
 // Declare function prototypes
 void createThreads(pthread_t threads[], int num_threads, void *(*start_routine)(void *), void *args);
 void joinThreads(pthread_t threads[], int num_threads);
