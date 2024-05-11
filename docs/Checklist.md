@@ -1,51 +1,60 @@
-To ensure your Sudoku Solution Validator project is completed to a high standard, here’s a detailed to-do list organized by priority. This checklist will guide you through finalizing your implementation, refining features, and preparing your submission.
+### Review and Feedback on Codebase
+1. **Header File Consistency:**
+    - All header files should uniformly include guard clauses to prevent multiple inclusions. Make sure all headers are consistent in this respect.
 
-### 1. Implement Validation Logic
-- **Implement validation functions** in `sudoku_validator.c` for rows, columns, and subgrids. Ensure each function accurately checks for the presence of all digits from 1 to 9 without repetition.
-- **Integrate validation logic** into the `validate_section` function in `mssv.c`, using the mutex to manage shared resources safely.
+2. **Error Handling:**
+    - Error messages should be directed to `stderr` instead of `stdout`. This is a best practice for error logging and can be done using `fprintf(stderr, "Error message")`.
 
-### 2. Test and Debug Multithreading
-- **Test the multithreading functionality** thoroughly to ensure that each thread correctly validates its assigned section of the Sudoku puzzle.
-- **Debug any issues** related to race conditions or deadlocks. Utilize tools like `valgrind` or `gdb` if necessary to trace problems.
+3. **Validation Logic:**
+    - The placeholder comments in `thread_functions.c` need to be replaced with actual logic for validating rows, columns, and sub-grids.
 
-### 3. Implement Delay Functionality
-- **Insert sleep** statements in each thread to simulate delays, ensuring that the delay parameter from the command line is correctly applied to each thread.
+4. **Thread Functionality:**
+    - The logic for creating and managing threads appears to be started but needs full implementation, especially ensuring thread synchronization is correctly handled to prevent race conditions.
 
-### 4. Setup Input/Output Handling
-- **Improve file reading** in `utilities.c` to handle potential errors more gracefully, such as malformed input files.
-- **Implement result output** in `mssv.c` to print whether each row, column, and subgrid is valid, along with the final validation status of the Sudoku puzzle.
+5. **Utility Functions:**
+    - Functions like `printErrorMessage` and `printSudokuSolution` are crucial for debugging and output clarity. Ensure these are used effectively throughout your code for reporting statuses and errors.
 
-### 5. Finalize Shared Data Structures
-- **Ensure that shared data structures** (rows, columns, subgrids) in `mssv.h` are correctly updated and accessed by threads. Include necessary locks or other synchronization mechanisms.
+6. **Memory Management:**
+    - While your current implementation does not explicitly use dynamic memory allocation, always check for potential memory leaks or unnecessary memory usage.
 
-### 6. Clean and Comment Code
-- **Refactor and clean the code** across all files to remove unused variables, functions, and include necessary comments describing the functionality.
-- **Ensure proper indentation and code style** guidelines are followed to enhance readability.
+7. **Documentation and Comments:**
+    - Ensure that each function and major block of logic within functions is well-documented with comments explaining what the code does, which can be crucial for maintenance and evaluation purposes.
 
-### 7. Prepare Documentation
-- **Write a comprehensive README file** that includes instructions on how to compile and run the program, including the description of command-line arguments.
-- **Document the design and synchronization strategy** in your code, specifying how threads interact and how race conditions are avoided.
+8. **Include Directories:**
+    - Ensure that the compiler include paths are correctly set in the Makefile if your project structure uses nested directories for header files.
 
-### 8. Testing with Sample Inputs
-- **Create a variety of test Sudoku puzzles**, both valid and invalid, to ensure your validator handles all scenarios correctly.
-- **Document these test cases** and their expected outputs in your report.
+### Checklist for Completion
+1. **Implement Validation Logic:**
+    - Complete the implementation for `validateRows`, `validateColumns`, and `validateSubGrids` functions. Ensure they accurately check the Sudoku rules.
 
-### 9. Compile and Test the Makefile
-- **Ensure the Makefile works correctly** and compiles the program without errors. Test the Makefile on different platforms if possible to ensure portability.
+2. **Complete the Validation Output Implementation:**
+   - You need to implement the section in `mssv.c` to collect results from threads and print a comprehensive report on the Sudoku's validity. This involves aggregating results from all threads and determining if the Sudoku is solved correctly.
 
-### 10. Submission Preparation
-- **Organize all files** in the specified directory structure as required by the assignment.
-- **Package your submission** as per the instructions, usually in a zip file containing all necessary source code, Makefile, documentation, and any additional resources.
+3. **Test Thread Synchronization:**
+    - Thoroughly test the thread synchronization especially where shared resources like `Row`, `Col`, `Sub`, and `Counter` are accessed. Use mutexes and condition variables correctly.
 
-### 11. Write the Assignment Report
-- **Detail your implementation**, the challenges faced, and how they were overcome.
-- **Explain the synchronization mechanism** in depth and discuss any parts of the program that might not work as expected or could be improved.
+4. **Error Handling:**
+    - Implement comprehensive error handling across all modules. Ensure that all potential failure points are gracefully managed.
+    -  Your thread creation and joining are protected by error checks, which is excellent. Make sure to handle any potential errors that could arise during the thread's runtime, not just at creation and joining.
 
-### 12. Peer Review and Feedback
-- **Conduct a peer review** of your code if possible. Getting feedback from classmates or instructors can provide new insights and highlight issues you might have overlooked.
+5. **Output Validation Results:**
+    - Implement the functionality to print validation results as specified in your assignment requirements. This should include both correct and incorrect Sudoku configurations.
 
-### 13. Final Run and Validate
-- **Do a final run-through** of the entire program to ensure everything works as expected.
-- **Validate all functionalities** one last time before submission.
+6. **Refactoring:**
+    - Refactor any repetitive or complex parts of the code to improve readability and maintainability. Consider utility functions for common tasks.
 
-This checklist ensures that every aspect of your project meets high standards and is ready for submission.
+7. **Comprehensive Testing:**
+    - Test the application with various Sudoku puzzles and delay configurations to ensure robustness and correctness. Include both edge cases and typical cases.
+    - Create a suite of test cases that your program can run through. This could be a separate function or script that tests various Sudoku configurations.
+
+8. **Documentation:**
+    - PTHREAD_MUTEX_INITIALIZER needs the `Z` changed to an `S` (and anywhere where `initializer` exists.
+    - Provide a detailed README file explaining how to compile and run the program, including any dependencies or external libraries.
+    - Update your code with more detailed comments explaining how each part works, especially within the thread functions.
+    - Document each function in the code, describing its purpose, inputs, outputs, and any side effects.
+
+9. **Final Review:**
+    - Perform a final review to check for consistency in coding style, naming conventions, and file structure.
+
+10. **Prepare for Submission:**
+     - Ensure that all files are named correctly and stored in the appropriate directory structure as required by the assignment. Zip the directory if required by the submission guidelines.
