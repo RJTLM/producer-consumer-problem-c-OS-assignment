@@ -4,23 +4,26 @@
 # Created by RyanM on 30/04/2024.
 #
 
-CC=gcc
-CFLAGS=-I./Assignment -Wall -g
-LDFLAGS=-pthread
+CC = gcc
+CFLAGS = -pthread -Wall
 
-SRCS=$(wildcard Assignment/*.c)
-OBJS=$(SRCS:.c=.o)
-EXEC=mssv
+mssv: mssv.o file_reader.o thread_functions.o utility.o thread_mgmt.o
+    $(CC) $(CFLAGS) -o mssv mssv.o file_reader.o thread_functions.o utility.o thread_mgmt.o
 
-all: $(EXEC)
+mssv.o: mssv.c mssv.h
+    $(CC) $(CFLAGS) -c mssv.c
 
-$(EXEC): $(OBJS)
-    $(CC) $(LDFLAGS) -o $@ $^
+file_reader.o: file_reader.c file_reader.h
+    $(CC) $(CFLAGS) -c file_reader.c
 
-%.o: %.c
-    $(CC) $(CFLAGS) -c -o $@ $<
+thread_functions.o: thread_functions.c thread_functions.h
+    $(CC) $(CFLAGS) -c thread_functions.c
+
+utility.o: utility.c utility.h
+    $(CC) $(CFLAGS) -c utility.c
+
+thread_mgmt.o: thread_mgmt.c thread_mgmt.h
+    $(CC) $(CFLAGS) -c thread_mgmt.c
 
 clean:
-    rm -f $(OBJS) $(EXEC)
-
-.PHONY: all clean
+    rm -f *.o mssv
