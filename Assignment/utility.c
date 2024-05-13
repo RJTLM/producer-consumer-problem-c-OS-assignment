@@ -6,12 +6,26 @@
 
 #include "utility.h"
 
+#define ANSI_COLOR_RED     "\x1b[31m"
+#define ANSI_COLOR_GREEN   "\x1b[32m"
+#define ANSI_COLOR_YELLOW  "\x1b[33m"
+#define ANSI_COLOR_BLUE    "\x1b[34m"
+#define ANSI_COLOR_RESET   "\x1b[0m"
+
 void printErrorMessage(char *message) {
-    fprintf(stderr, "Error: %s\n", message);
+    fprintf(stderr, ANSI_COLOR_RED "Error: %s" ANSI_COLOR_RESET "\n", message);
 }
 
-void printMessage(char *message) {
-    printf("%s\n", message);
+void printSuccess(const char *message) {
+    printf(ANSI_COLOR_GREEN "%s" ANSI_COLOR_RESET "\n", message);
+}
+
+void printFailure(const char *message) {
+    printf(ANSI_COLOR_RED "%s" ANSI_COLOR_RESET "\n", message);
+}
+
+void printInfo(const char *message) {
+    printf(ANSI_COLOR_BLUE "%s" ANSI_COLOR_RESET "\n", message);
 }
 
 void printSudokuSolution(int sudoku[9][9]) {
@@ -22,4 +36,8 @@ void printSudokuSolution(int sudoku[9][9]) {
         }
         printf("\n");
     }
+}
+
+void printMessage(char *message) {
+    printf("%s\n", message);
 }

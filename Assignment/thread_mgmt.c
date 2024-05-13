@@ -13,6 +13,7 @@
  */
 #include "thread_mgmt.h"
 #include "thread_functions.h"
+#include "utility.h"
 
 void createThreads(pthread_t threads[], int num_threads, void *(*start_routine)(void *), ThreadArgs args_array[]) {
     for (int i = 0; i < num_threads; i++) {

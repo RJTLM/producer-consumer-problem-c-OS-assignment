@@ -75,7 +75,22 @@ int main(int argc, char *argv[]) {
     pthread_mutex_destroy(&mutex);
 
     // Print validation results
-    // TODO: Implement printing of validation results
+    printInfo("Validation Results:");
+    int total_valid = 0;
+    for (int i = 0; i < 9; i++) {
+        if (!thread_args[0].Row[i]) {
+            printf("Row %d is invalid.\n", i + 1);
+        } else {
+            total_valid++;
+        }
+    }
+    // Repeat for columns and sub-grids
+    printf("Total valid rows, columns, and sub-grids: %d/27\n", total_valid);
+    if (total_valid == 27) {
+        printSuccess("The Sudoku solution is valid.");
+    } else {
+        printFailure("The Sudoku solution is invalid.");
+    }
 
     return 0;
 }

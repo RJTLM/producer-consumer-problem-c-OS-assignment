@@ -7,10 +7,6 @@
 #ifndef FILE_READER_H
 #define FILE_READER_H
 
-#include <stdio.h>
-#include <stdlib.h>
-
 void readSudokuSolution(char *filename, int sudoku[9][9]);
 
 #endif /* FILE_READER_H */
-

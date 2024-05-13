@@ -13,7 +13,9 @@
  * to perform their tasks based on the parameters passed through ThreadArgs.
  */
 
+#include <stdio.h>
 #include "thread_functions.h"
+#include "utility.h"
 
 // Helper function to check if all elements are present in a section
 int validateSection(int section[9]) {
@@ -27,20 +29,24 @@ int validateSection(int section[9]) {
     return 1;  // Return true if the section is valid
 }
 
+// In thread_functions.c
 void *validateRowsAndColumns(void *args) {
     ThreadArgs *thread_args = (ThreadArgs *)args;
     int valid = 1;
+    char buffer[256];
+
+    pthread_mutex_lock(thread_args->mutex); // Ensure mutex lock is properly called
 
     if (thread_args->validate_rows) {
-        // Validate rows
         for (int i = thread_args->start_row; i <= thread_args->end_row; i++) {
             if (!validateSection(thread_args->sudoku[i])) {
                 valid = 0;
+                sprintf(buffer, "Thread ID-%d: Row %d validation failed.", thread_args->thread_id, i + 1);
+                printFailure(buffer);
                 break;
             }
         }
     } else {
-        // Validate columns
         for (int col = 0; col < 9; col++) {
             int column[9];
             for (int row = 0; row < 9; row++) {
@@ -48,15 +54,23 @@ void *validateRowsAndColumns(void *args) {
             }
             if (!validateSection(column)) {
                 valid = 0;
+                sprintf(buffer, "Thread ID-%d: Column %d validation failed.", thread_args->thread_id, col + 1);
+                printFailure(buffer);
                 break;
             }
         }
     }
 
-    pthread_mutex_lock(thread_args->mutex);
+    sprintf(buffer, "Thread ID-%d: %s validation completed with %s.", thread_args->thread_id, thread_args->validate_rows ? "Row" : "Column", valid ? "success" : "failure");
+    if (valid) {
+        printSuccess(buffer);
+    } else {
+        printFailure(buffer);
+    }
+
     printf("Thread ID-%d: %s validation completed with %s.\n", thread_args->thread_id, thread_args->validate_rows ? "Row" : "Column", valid ? "success" : "failure");
-    pthread_mutex_unlock(thread_args->mutex);
-    pthread_exit(NULL);
+    pthread_mutex_unlock(thread_args->mutex); // Ensure mutex unlock is properly called
+    pthread_exit(NULL); // Correct exit from thread
 }
 
 void *validateSubGrids(void *args) {

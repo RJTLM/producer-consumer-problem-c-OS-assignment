@@ -4,6 +4,8 @@
 // Created by RyanM on 30/04/2024.
 //
 
+#include <stdio.h>
+#include <stdlib.h>
 #include "file_reader.h"
 
 void readSudokuSolution(char *filename, int sudoku[9][9]) {
