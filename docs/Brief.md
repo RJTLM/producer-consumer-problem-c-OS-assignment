@@ -1,5 +1,4 @@
-This is the brief:
-"# Assignment: Sudoku Solution Validator (SSV)
+# Assignment: Sudoku Solution Validator (SSV)
 
 ## Objective
 
@@ -129,7 +128,7 @@ where `solution` (OS/Assignment/Solutions/solution) is the file that contains th
  
 - This is a Producer Consumer Problem where the parent thread is the consumer and all child threads are the producers.
 - Make sure same thread is not always last (have a check to make sure the same thread is not always last)/Make sure each thread has the chance to come last.
-- Print Pids and not just "Thread1, Thread2, etc.".
+- Print PIDs and not just "Thread1, Thread2, etc.".
 - When I create threads at the beginning, make sure they all get the same function or there's 2 functions for rows and columns"
 - Condition wait in main only before join.
 - Make sure everything is validated.
