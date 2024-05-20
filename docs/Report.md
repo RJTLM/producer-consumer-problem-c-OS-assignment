@@ -12,23 +12,25 @@ solve their critical section problems.*
 
 ### 1. Detailed discussion on how synchronization is achieved when accessing shared resources / variables and which threads access the shared resources
 
-In the Sudoku Solution Validator (SSV) program, synchronization is critical to ensure that the shared resources are accessed and modified correctly by multiple threads. The key shared resources in this program are the `Row`, `Col`, `Sub`, and `Counter` arrays, which store validation results for rows, columns, and sub-grids, as well as the total count of valid rows, columns, and sub-grids.
+In the Sudoku Solution Validator (SSV) program, synchronization is critical to ensure that the shared resources are accessed and modified correctly by multiple threads.
+The key shared resources in this program are the `Row`, `Col`, `Sub`, and `Counter` arrays, which store the validation results for rows, columns, and subgrids, as well as the total count of valid rows, columns, and subgrids.
 
 #### Threads and Shared Resources:
 
 - **Parent Thread**:
-    - Initializes the shared resources (`Row`, `Col`, `Sub`, and `Counter`).
+    - Initialises the shared resources (`Row`, `Col`, `Sub`, and `Counter`).
     - Creates child threads and assigns them specific regions to validate.
     - Waits for child threads to complete their tasks and then displays the final results.
 
 - **Child Threads**:
-    - Each child thread validates its assigned rows, columns, and sub-grids.
+    - Each child thread validates its assigned rows, columns, and subgrids.
     - Updates the shared resources based on the validation results.
 
-#### Synchronization Mechanisms:
+#### Synchronisation Mechanisms:
 
 1. **Mutex Locks**:
-    - **pthread_mutex_t shared_memory_mutex**: This mutex is used to control access to the `Row`, `Col`, `Sub`, and `Counter` arrays. Whenever a child thread needs to update these arrays, it must acquire the `shared_memory_mutex` lock to ensure that no other thread is modifying the shared resources simultaneously.
+    - **pthread_mutex_t shared_memory_mutex**: This mutex is used to control access to the `Row`, `Col`, `Sub`, and `Counter` arrays. 
+    - Whenever a child thread needs to update these arrays, it needs to acquire `shared_memory_mutex` lock to ensure that no other thread is modifying the shared resources simultaneously.
 
    ```c
    pthread_mutex_lock(&shared_memory_mutex);
@@ -37,7 +39,8 @@ In the Sudoku Solution Validator (SSV) program, synchronization is critical to e
    ```
 
 2. **Condition Variables**:
-    - **pthread_cond_t sync_condition**: This condition variable is used for the parent thread to wait for all child threads to complete their validation. The parent thread blocks on this condition variable until all child threads signal that they have finished their tasks.
+    - **pthread_cond_t sync_condition**: This condition variable is used for the parent thread to wait for all child threads to complete their validation. 
+    - The parent thread blocks on this condition variable until all child threads signal that they have finished their tasks.
 
    ```c
    pthread_mutex_lock(&thread_counter_mutex);
@@ -48,7 +51,8 @@ In the Sudoku Solution Validator (SSV) program, synchronization is critical to e
    ```
 
 3. **Thread Counters**:
-    - **int completed_thread_count**: This counter keeps track of the number of child threads that have completed their tasks. Each child thread increments this counter when it finishes its validation. The last thread to finish signals the parent thread to proceed.
+    - **int completed_thread_count**: This counter keeps track of the number of child threads that have completed their tasks. 
+    - Each child thread increments this counter when it finishes its validation. The last thread to finish signals the parent thread to proceed.
 
    ```c
    pthread_mutex_lock(&thread_counter_mutex);
@@ -60,7 +64,8 @@ In the Sudoku Solution Validator (SSV) program, synchronization is critical to e
    ```
 
 4. **Thread Queue Management**:
-    - **pthread_t thread_queue[]**: This array and its associated mutex `thread_queue_mutex` manage the order in which threads enter the critical section for validation. This ensures fair access to the critical section and helps prevent thread starvation.
+    - **pthread_t thread_queue[]**: This array and its associated mutex `thread_queue_mutex` manage the order in which threads enter the critical section for validation. 
+    - This ensures fair access to the critical section and helps prevent thread starvation (being denied resource access due to scheduling).
 
    ```c
    pthread_mutex_lock(&thread_queue_mutex);
@@ -73,7 +78,7 @@ In the Sudoku Solution Validator (SSV) program, synchronization is critical to e
    pthread_mutex_unlock(&thread_queue_mutex);
    ```
 
-By using these synchronization mechanisms, the program ensures that all threads can safely access and modify shared resources without causing data corruption or inconsistencies.
+By using these synchronisation mechanisms, the program ensures that all threads can safely access and modify shared resources without causing data corruption or inconsistencies.
 
 ### 2. Description of any cases for which your program is not working correctly or how you test your program that makes you believe it works perfectly
 
@@ -90,22 +95,34 @@ The program was tested extensively using multiple Sudoku solution files with kno
     - The program correctly identified the invalid rows, columns, and sub-grids, and printed the expected output indicating which parts of the solution were invalid.
 
 3. **Boundary Cases**:
-    - Solutions with the minimum and maximum possible delays (1 and 10 seconds) were tested to ensure the program handles these delays correctly without synchronization issues.
+    - Solutions with the minimum and maximum possible delays (1 and 10 seconds) were tested to ensure the program handles these delays correctly.
     - Solutions with varying numbers of invalid entries were tested to ensure the program correctly counts and identifies all invalid rows, columns, and sub-grids.
 
-4. **Concurrency and Synchronization**:
-    - The program was tested on a multi-core machine to observe the behavior of multiple threads and ensure proper synchronization.
-    - Additional debugging and logging were added to track the sequence of thread execution and ensure that no data races or deadlocks occurred.
+4. **User Input**:
+   - Correct and incorrect command line arguments were tested to ensure sufficient error handling for the purposes of this assignment.
+
+Incorrect Delay Testing:
+![DelayTesting](/docs/SampleData/UserInput1.JPG)
+
+Incorrect Filename Testing:
+![IncorrectFileNameTesting](/docs/SampleData/UserInput2.JPG)
+
+5. **Edge Cases**:
+   - Testing with edge cases such as empty files, files with incorrect formats, or solutions with the maximum number of invalid entries to ensure the program handles all possible scenarios gracefully.
+
+Testing with a file that contains invalid/missing data:
+![EdgeCaseTesting](/docs/SampleData/EdgeCase1.JPG)
 
 #### Known Issues
 
-As of the current implementation, there are no known issues with the program. The synchronization mechanisms (mutexes and condition variables) effectively manage access to shared resources, and the program has been tested to handle various scenarios accurately.
+There are no known issues with the program within a Linux (Curtin VMWare) or Windows environment. The screenshots below demonstrate successful Linux terminal operation which is necessary for the assignment. 
+The synchronisation mechanisms (mutexes and condition variables) effectively manage access to shared resources, and the program has been tested to handle various scenarios accurately.
 
 However, potential areas for improvement or further testing include:
-- **Stress Testing**: Running the program with a very high number of iterations or on systems with different configurations to ensure robustness.
-- **Edge Cases**: Testing with edge cases such as empty files, files with incorrect formats, or solutions with the maximum number of invalid entries to ensure the program handles all possible scenarios gracefully.
+- **Stress Testing**: Running the program with a very high number of iterations or on systems with different configurations to ensure robustness. I tended to mainly test with a `Delay of 1` because it was time consuming to wait 10 seconds every time a new thread was in the critical section.
 
-In conclusion, based on extensive testing and validation, the program works correctly and meets the requirements of the assignment. The synchronization mechanisms ensure thread-safe access to shared resources, and the program accurately identifies valid and invalid Sudoku solutions.
+In conclusion, based on extensive testing and validation, the program works correctly and meets the requirements of the assignment. 
+The synchronisation mechanisms ensure thread-safe access to shared resources, and the program accurately identifies valid and invalid Sudoku solutions.
 
 ### 3. Sample inputs and outputs from your running programs. Explain if the outputs are correct / incorrect
 
@@ -132,7 +149,6 @@ By Ryan Mackintosh
 
 ### Directory Structure
 
-
 OS/
 ├── Assignment/                 # Directory containing all source files and headers
 │   ├── Solutions/                      # Directory containing sample solution files
@@ -151,11 +167,14 @@ OS/
 │
 ├── docs/                       # Documentation and additional notes
 │   ├── SampleData/                     # Sample data for report
+│   │   ├── EdgeCase1.JPG
 │   │   ├── InvalidSolution.JPG
 │   │   ├── InvalidSolutionInput.JPG
+│   │   ├── UserInput1.JPG
+│   │   ├── UserInput2.JPG
 │   │   ├── ValidSolution.JPG
 │   │   └── ValidSolutionInput.JPG
-│   │ 
+│   │
 │   ├── declaration_of_originality.pdf  # Originality declaration
 │   └── Report.md                       # Project report
 │
@@ -166,18 +185,18 @@ OS/
 1. Make sure you are in `OS/Assignment` to build.
 2. Run `make` to build the project.
 3. Run the program with `./mssv Solutions/<solution_file> <delay>`.
-    - `<solution_file>` is file name that contains the sudoku e.g. `solution2`
-    - `<delay>` is the delay in seconds (must be between 1 and 10).
+   - `<solution_file>` is file name that contains the sudoku e.g. `solution2`
+   - `<delay>` is the delay in seconds (must be between 1 and 10).
 4. Run `make clean` to remove the compiled files.
 
     ```
     Run `make clean && make` for convenience and assurance of a clean build every time.
     ```
-
+   
 ### File Descriptions
 
-- **mssv.c**: Main program file that initializes threads and manages Sudoku validation.
-- **sudoku_setup.c/h**: Functions for initializing and freeing shared memory structures.
+- **mssv.c**: Main program file that initializes threads and manages Sudoku validation. 
+- **sudoku_setup.c/h**: Functions for initializing and freeing shared memory structures. 
 - **sudoku_solution_file_reader.c/h**: Functions for reading Sudoku solutions from files.
 
 ### Additional Documentation
@@ -188,7 +207,7 @@ OS/
 ### Resources
 
 I have used knowledge gained from UCP and OS to write the majority of this program.
-Where this is not the case, I have commented the source in the code.
+Where this is not the case, I have commented the source in the code. 
 ```
 
 #### Makefile:
@@ -217,14 +236,13 @@ $(EXEC): $(OBJS)
 
 clean:
 	rm -f $(EXEC) $(OBJS)
-
 ```
 
 #### Source Code:
 
 ##### mssv.c:
 
-```c++
+```c++ (c++ looks prettier than c in this format for display purposes. The code is C.)
 //
 // OS/Assignment/mssv.c
 // Main program for Sudoku Solution Validator

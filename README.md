@@ -25,8 +25,11 @@ OS/
 │
 ├── docs/                       # Documentation and additional notes
 │   ├── SampleData/                     # Sample data for report
+│   │   ├── EdgeCase1.JPG
 │   │   ├── InvalidSolution.JPG
 │   │   ├── InvalidSolutionInput.JPG
+│   │   ├── UserInput1.JPG
+│   │   ├── UserInput2.JPG
 │   │   ├── ValidSolution.JPG
 │   │   └── ValidSolutionInput.JPG
 │   │ 
