@@ -25,8 +25,10 @@ OS/
 │
 ├── docs/                       # Documentation and additional notes
 │   ├── SampleData/                     # Sample data for report
-│   │   ├── 
-│   │   └──
+│   │   ├── InvalidSolution.JPG
+│   │   ├── InvalidSolutionInput.JPG
+│   │   ├── ValidSolution.JPG
+│   │   └── ValidSolutionInput.JPG
 │   │ 
 │   ├── declaration_of_originality.pdf  # Originality declaration
 │   └── Report.md                       # Project report
