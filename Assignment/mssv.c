@@ -26,7 +26,7 @@ typedef struct {
     int number; // Thread number
     int* rows; // Array of rows to validate
     int* cols; // Array of columns to validate
-    int* subGrids; // Array of sub-grids to validate
+    int* subGrids; // Array of subgrids to validate
     SolutionStruct* solution_info; // Shared solution structure
     int sleep_value; // Sleep value for delay
 } ThreadStruct;
@@ -96,7 +96,7 @@ void* start_parent_thread(char** argv, int sleep_value) {
     ThreadStruct** thread_array = malloc(sizeof(ThreadStruct*) * 4);
     for (int i = 0; i < 4; i++) {
         thread_array[i] = malloc(sizeof(ThreadStruct));
-        thread_array[i]->solution_info = solution_data; // Corrected member name
+        thread_array[i]->solution_info = solution_data;
         thread_array[i]->number = i + 1;
         thread_array[i]->sleep_value = sleep_value;
 
@@ -263,7 +263,7 @@ void display_parent_results(SolutionStruct* solution_info, pthread_t* threads) {
                     if (found_problem > 0) {
                         printf(", ");
                     }
-                    printf("sub-grid %d", location);
+                    printf("subgrid %d", location);
                     plural++;
                     found_problem++;
                 }
@@ -339,7 +339,7 @@ void validate_row(ThreadStruct* thread_info, int row) {
 Function: validate_subgrid
 Import: ThreadStruct* thread_info, int subgrid
 Export: void
-Purpose: Validates a sub-grid in the Sudoku solution.
+Purpose: Validates a subgrid in the Sudoku solution.
 */
 void validate_subgrid(ThreadStruct* thread_info, int subgrid) {
     int row_start, row_stop, col_start, col_stop;
@@ -515,7 +515,7 @@ void show_column_results(SolutionStruct* solution_info) {
 Function: show_subgrid_results
 Import: SolutionStruct* solution_info
 Export: void
-Purpose: Displays the results of sub-grid validation.
+Purpose: Displays the results of subgrid validation.
 */
 void show_subgrid_results(SolutionStruct* solution_info) {
     if (solution_info->Counter == 27) {
@@ -536,3 +536,7 @@ void show_subgrid_results(SolutionStruct* solution_info) {
         }
     }
 }
+
+// Why does Ryan wear glasses?
+
+// Because he can't C..

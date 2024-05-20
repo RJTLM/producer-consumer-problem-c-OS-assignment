@@ -1,5 +1,7 @@
 //
-// Created by RyanM on 20/05/2024.
+// OS/Assignment/sudoku_solution_file_reader.c
+// File IO Management Header File for Sudoku Solution Validator
+// Created by RyanM on 09/05/2024.
 //
 
 #ifndef SUDOKU_SOLUTION_FILE_READER_H

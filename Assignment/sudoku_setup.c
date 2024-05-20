@@ -1,5 +1,7 @@
 //
-// Created by RyanM on 20/05/2024.
+// OS/Assignment/sudoku_setup.c
+// Memory Management for Sudoku Solution Validator
+// Created by RyanM on 10/05/2024.
 //
 
 #include <stdlib.h>
@@ -23,7 +25,6 @@ SolutionStruct* initialise_shared_memory(SudokuData* board_info) {
     solution_info->Col = malloc(board_info->size * sizeof(int));
     solution_info->Sub = malloc(board_info->size * sizeof(int));
 
-    // Initialise Counter to 0
     solution_info->Counter = 0;
 
     // Allocate memory for each row in the Sol array
@@ -31,14 +32,12 @@ SolutionStruct* initialise_shared_memory(SudokuData* board_info) {
         solution_info->Sol[i] = malloc(board_info->size * sizeof(int));
     }
 
-    // Initialise the Row, Col, and Sub arrays to 0
     for (int i = 0; i < board_info->size; i++) {
         solution_info->Row[i] = 0;
         solution_info->Col[i] = 0;
         solution_info->Sub[i] = 0;
     }
 
-    // Return the initialised solution structure
     return solution_info;
 }
 
@@ -56,14 +55,11 @@ void free_memory(SolutionStruct* solution_info, SudokuData* board_info) {
         free(solution_info->Sol[i]);
     }
 
-    // Free the memory allocated for the Sol array
+    // Frees the allocated memory (opposite to function above)
     free(solution_info->Sol);
-    // Free the memory allocated for the Row, Col, and Sub arrays
     free(solution_info->Row);
     free(solution_info->Col);
     free(solution_info->Sub);
-    // Free the memory allocated for the board info structure
     free(board_info);
-    // Free the memory allocated for the solution structure
-    free(solution_info);
+    free(solution_info); // yay :)
 }

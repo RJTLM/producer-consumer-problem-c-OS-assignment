@@ -1,5 +1,7 @@
 //
-// Created by RyanM on 20/05/2024.
+// OS/Assignment/sudoku_setup.h
+// Memory Management Header File for Sudoku Solution Validator
+// Created by RyanM on 10/05/2024.
 //
 
 #ifndef SUDOKU_SETUP_H
@@ -7,8 +9,8 @@
 
 // Structure to hold Sudoku board information
 typedef struct {
-    int size;         // Size of the Sudoku board
-    char* sourceFile; // Name of the file containing the Sudoku solution
+    int size;
+    char* sourceFile;
 } SudokuData;
 
 // Structure to hold the Sudoku solution and validation results
