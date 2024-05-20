@@ -32,7 +32,7 @@ int load_sudoku_from_file(SudokuData* board_data, SolutionStruct* solution_data)
             // Read each number from the file
             if ((fscanf(file_pointer, "%d", &num) != 1) || (num < 1 || num > 9)) {
                 // Print an error message if the number is invalid
-                fprintf(stderr, "\033[31mError\033[0m\t Invalid data in the file\n");
+                fprintf(stderr, "\033[31mError\033[0m\t Invalid data in the file. File must contain integers from 1 to 9 (inclusive) only and in the correct format.\n");
                 fclose(file_pointer); // Close the file
                 return 1;
             }

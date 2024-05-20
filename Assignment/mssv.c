@@ -294,7 +294,7 @@ void display_parent_results(SolutionStruct* solution_info, pthread_t* threads) {
     if (solution_info->Counter == 27) {
         printf("\n\033[32mThe provided sudoku solution is correct.\033[0m\n");
     } else {
-        printf("\n\033[31mThe provided sudoku solution is incorrect (only %d rows/columns/subgrids are valid).\033[0m\n", solution_info->Counter);
+        printf("\n\033[31mThe provided sudoku solution is incorrect (only %d rows/columns/subgrids from 27 are valid).\033[0m\n", solution_info->Counter);
     }
 }
 
@@ -475,7 +475,7 @@ void show_row_results(SolutionStruct* solution_info) {
     if (solution_info->Counter == 27) {
         printf("\n\033[32mRows: Successful\033[0m\n");
     } else {
-        printf("\n\033[31mRows: Unsuccessful\033[0m\n");
+        printf("\n\033[31mRows:\033[0m\n");
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 if (solution_info->Row[i] == 0) {
@@ -498,7 +498,7 @@ void show_column_results(SolutionStruct* solution_info) {
     if (solution_info->Counter == 27) {
         printf("\n\033[32mColumns: Successful\033[0m\n");
     } else {
-        printf("\n\033[31mColumns: Unsuccessful\033[0m\n");
+        printf("\n\033[31mColumns:\033[0m\n");
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 if (solution_info->Col[j] == 0) {
@@ -521,7 +521,7 @@ void show_subgrid_results(SolutionStruct* solution_info) {
     if (solution_info->Counter == 27) {
         printf("\n\033[32mSubgrids: Successful\033[0m\n");
     } else {
-        printf("\n\033[31mSubgrids: Unsuccessful\033[0m\n");
+        printf("\n\033[31mSubgrids:\033[0m\n");
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 int subgrid_row = i / 3;
