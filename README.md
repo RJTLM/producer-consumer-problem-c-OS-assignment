@@ -1,16 +1,55 @@
+# README
+
+## Sudoku Solution Validator: Producer Consumer Problem
+
+By Ryan Mackintosh
+
+### Directory Structure
+
+```
 OS/
+├── Assignment/                 # Directory containing all source files and headers
+│   ├── Solutions/                      # Directory containing sample solution files
+│   │   ├── solution
+│   │   ├── solution1
+│   │   ├── solution2
+│   │   ├── solution3
+│   │   └── solution4
+│   │
+│   ├── Makefile                        # Makefile for building the project
+│   ├── mssv.c                          # Main source file containing the entry point and thread management
+│   ├── sudoku_setup.c                  # Memory management for Sudoku Solution Validator
+│   ├── sudoku_setup.h                  # Header for memory management
+│   ├── sudoku_solution_file_reader.c   # File IO management for reading Sudoku solutions
+│   └── sudoku_solution_file_reader.h   # Header for file IO management
 │
-├── CMakeLists.txt            # CMake configuration file
-├── Makefile                  # Makefile for building the project
+├── docs/                       # Documentation and additional notes
+│   ├── declaration_of_originality.pdf  # Originality declaration
+│   └── Report.md                       # Project report
 │
-├── Assignment/               # Directory containing all source files and headers
-│   ├── mssv.c                # Main source file containing the entry point and thread management
-│   ├── mssv.h                # Header file for declarations common to the project
-│   ├── sudoku_validator.c    # Implementation file for Sudoku validation logic
-│   ├── sudoku_validator.h    # Header file for Sudoku validation functions
-│   ├── utilities.c           # Utility functions like file reading and matrix operations
-│   └── utilities.h           # Header for utility functions
-│
-└── docs/                     # Documentation and additional notes
-├── README.md             # Instructions on building and running the program
-└── TESTING.md            # Details on tests and how to execute them
+└── README.md                   # Instructions on building and running the program
+ ```
+
+### Build Instructions and Usege
+
+1. Make sure you are in `OS/Assignment` to build.
+2. Run `make` to build the project.
+3. Run the program with `./mssv Solutions/<solution_file> <delay>`.
+   - `<solution_file>` is file name that contains the sudoku e.g. `solution2`
+   - `<delay>` is the delay in seconds (must be between 1 and 10).
+4. Run `make clean` to remove the compiled files.
+
+    ```
+    Run `make clean && make` for convenience and assurance of a clean build every time.
+    ```
+   
+### File Descriptions
+
+- **mssv.c**: Main program file that initializes threads and manages Sudoku validation. 
+- **sudoku_setup.c/h**: Functions for initializing and freeing shared memory structures. 
+- **sudoku_solution_file_reader.c/h**: Functions for reading Sudoku solutions from files.
+
+### Additional Documentation
+
+- **Report.md**: Contains the project report.
+- **declaration_of_originality.pdf**
