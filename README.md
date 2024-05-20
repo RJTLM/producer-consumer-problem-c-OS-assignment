@@ -24,6 +24,10 @@ OS/
 │   └── sudoku_solution_file_reader.h   # Header for file IO management
 │
 ├── docs/                       # Documentation and additional notes
+│   ├── SampleData/                     # Sample data for report
+│   │   ├── 
+│   │   └──
+│   │ 
 │   ├── declaration_of_originality.pdf  # Originality declaration
 │   └── Report.md                       # Project report
 │
@@ -53,3 +57,8 @@ OS/
 
 - **Report.md**: Contains the project report.
 - **declaration_of_originality.pdf**
+
+### Resources
+
+I have used knowledge gained from UCP and OS to write the majority of this program.
+Where this is not the case, I have commented the source in the code. 
